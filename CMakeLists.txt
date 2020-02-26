@@ -12,8 +12,8 @@ find_package(Nova REQUIRED)
 find_package(ZLIB REQUIRED)
 find_package(GSL REQUIRED)
 
-set(EQMOD_VERSION_MAJOR 0)
-set(EQMOD_VERSION_MINOR 8)
+set(SITECH_VERSION_MAJOR 0)
+set(SITECH_VERSION_MINOR 1)
 
 if (CYGWIN)
 add_definitions(-U__STRICT_ANSI__)
@@ -59,9 +59,7 @@ endif (CMAKE_SYSTEM_PROCESSOR MATCHES "arm*")
 
 install(TARGETS indi_sitech_telescope RUNTIME DESTINATION bin )
 
-install( FILES  ${CMAKE_CURRENT_BINARY_DIR}/indi_sitech.xml indi_sitech_sk.xml DESTINATION ${INDI_DATA_DIR})
-
-install( FILES  simulator/indi_sitech_simulator_sk.xml DESTINATION ${INDI_DATA_DIR})
+install( FILES  ${CMAKE_CURRENT_BINARY_DIR}/indi_sitech.xml DESTINATION ${INDI_DATA_DIR})
 
 ###################################################################################################
 #########################################  Tests  #################################################
